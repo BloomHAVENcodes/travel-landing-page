@@ -1,6 +1,6 @@
 
 *{
-    margin: 0; padding: 0;
+    margin: 0; padding: -100px;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     outline: none; 
@@ -272,6 +272,7 @@ p{
 .banner .content h1{
     font-size: 3rem;
     letter-spacing: .5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .banner .bottom-bar{
@@ -279,7 +280,6 @@ p{
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 15px;
-    bottom: 20px;
     border-radius: 15px;
     height: auto;
 }
@@ -329,7 +329,105 @@ p{
 }
 
 }
+@media (max-width:375px) {
+    header{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
 
+    .logo{
+        font-size: 2rem;
+    }
+
+    .search{
+        display: none;
+    }
+
+    .nav{
+        display: flex;
+        padding: 15px;
+    }
+
+    .nav li{
+        font-size: 12px;
+        padding: .5px;
+    }
+
+    .banner{
+    background: url('') no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 1rem;
+}
+
+    .banner .content{
+        text-align: center;
+        padding-top: 8rem;
+        padding-bottom: -3rem;
+    }
+
+.banner .content h1{
+    font-size: 3rem;
+    letter-spacing: .5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.banner .bottom-bar{
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    bottom: 50px;
+    border-radius: 15px;
+    height: auto;
+}
+.banner .bottom-bar::before{
+    content: '';
+    position: absolute;
+    top: 15%;
+    bottom: 15%;
+    left: 50%;
+    width: 1px;
+    background: rgba(255,255,255,.5);
+}
+
+.banner .bottom-bar::after{
+    content: '';
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 50%;
+    height: 1px;
+    background: rgba(255,255,255,.5);
+}
+
+.banner .bottom-bar .item{
+    width: 100%;
+    height: 130px;
+    padding-top: 10px;
+}
+
+.banner .bottom-bar .item::before{
+    display: none;
+}
+
+.banner .bottom-bar .item .img-box{
+    width: 100%;
+    height: 60px;
+}
+
+.banner .bottom-bar .item .img-box img{
+    width: 80%;
+    height: 100%;
+}
+
+.banner .bottom-bar .item p{
+    font-size: .9em;
+    margin: 0 0 10px 0;
+}
+
+
+}
 
 
 
