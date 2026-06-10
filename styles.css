@@ -1,0 +1,336 @@
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; 
+    text-decoration: none;
+    transition: .2s linear;
+    scroll-behavior: smooth;
+}
+body{
+    background: #3b3737;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    z-index: 10;
+}
+p{
+    font-size: 15px;
+}
+
+.nav{
+    display: flex;
+}
+.logo{
+    font-size: 2.5rem;
+    color:#fff;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+.logo span{
+    background: linear-gradient(90deg,
+    #fa9b0c 10%,
+    #e60800 100%
+    );
+    background-clip: text;
+    color: transparent;
+}
+.nav li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.nav li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+ .nav li:hover a{
+    color: red;
+}
+.search{
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+.search input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffff;
+    background: transparent;
+    border: none;
+    border-right: 2px solid rgba(255, 255, 255, .5);
+    border-bottom: 2px solid rgba(255, 255, 255, .5);
+    outline: none;
+    border-radius: 4px;
+    padding: 0 10px 0 45px;
+    backdrop-filter: blur(10px);
+
+}
+.search input::placeholder{
+    color: #ffffffff;
+}
+.search i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    padding-right: 10px;
+    color: #fff;
+    border-right: 2px solid rgba(255, 255, 255, .5);
+}
+.banner .btn{
+    display: inline-block;
+    background: rgba(255, 255, 255, .8);
+    padding: .5rem 1.5rem;
+    color: #0a0606;
+    border-radius: 2rem;
+    margin-top: .7rem;
+}
+.banner .btn:hover{
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    transform: scale(1.05);
+}
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    padding: 0 10rem;
+    background-image: url('paris-left.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+.banner .bottom-bar .img-box img.active{
+    border: 3px solid #a59d9d ;
+    transform: scale(1.03);
+}
+.banner .content{
+    padding-top: 10rem;
+}
+.banner .content h1{
+    color: #fff ; 
+    font-size: 6em; 
+    letter-spacing: 5px;
+    font-weight: 100;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.banner .content p{
+    color: #fff;
+    font-size: 1em;
+    font-family: 'poppins';
+}
+.banner .bottom-bar-container{
+    justify-content: center;
+    align-items: center;
+}
+.banner .bottom-bar{
+    position: absolute;
+    bottom: 30px;
+    width: 60%;
+    left: 50%;
+    height: 27vh;
+     display: flex;
+    transform: translateX(-50%);
+     backdrop-filter: blur(10px);
+     justify-content: center;
+     align-items: center;
+     flex-direction: row;
+     border-radius: 20px;
+     box-shadow: 0 0 15px rgba(32, 32, 32, 0.5);
+}
+.banner .bottom-bar .item {
+    padding-top: 25px;
+    transition: 0.5s ease-in-out;
+    width: 25%;
+    height: 100%;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+
+.banner .bottom-bar .item:not(:first-child)::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 1px;
+    height: 80%;
+    background: #ffff;
+    opacity: 0.6s;
+}
+.banner .bottom-bar .item .hover-bar{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background: #fff;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+}
+.banner .bottom-bar .item .img-box{
+    transition: 0.5s ease-in-out;
+    width: 100%;
+    height: 55%;
+}
+.banner .bottom-bar .item .img-box img{
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.banner .bottom-bar .item:hover{
+    transform: scale(1.05);
+}
+.banner .bottom-bar .item:hover .hover-bar{
+    opacity: 1;
+    visibility: visible;
+}
+.banner .bottom-bar .item p{
+    transition: 0.5s ease-in-out;
+    color: #ffffffff;
+    margin: 0 0 15px 0;
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px){
+
+    header{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo{
+        font-size: 2rem;
+    }
+
+    .search{
+        display: none;
+    }
+
+    .nav{
+        display: flex;
+        padding: 15px;
+    }
+
+    .nav li{
+        font-size: 12px;
+        padding: .5px;
+    }
+
+    .banner{
+    background: url('') no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 1rem;
+}
+
+    .banner .content{
+        text-align: center;
+        padding-top: 8rem;
+        padding-bottom: 18rem;
+    }
+
+.banner .content h1{
+    font-size: 3rem;
+    letter-spacing: .5px;
+}
+
+.banner .bottom-bar{
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+    bottom: 20px;
+    border-radius: 15px;
+    height: auto;
+}
+.banner .bottom-bar::before{
+    content: '';
+    position: absolute;
+    top: 15%;
+    bottom: 15%;
+    left: 50%;
+    width: 1px;
+    background: rgba(255,255,255,.5);
+}
+
+.banner .bottom-bar::after{
+    content: '';
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 50%;
+    height: 1px;
+    background: rgba(255,255,255,.5);
+}
+
+.banner .bottom-bar .item{
+    width: 100%;
+    height: 130px;
+    padding-top: 10px;
+}
+
+.banner .bottom-bar .item::before{
+    display: none;
+}
+
+.banner .bottom-bar .item .img-box{
+    width: 100%;
+    height: 60px;
+}
+
+.banner .bottom-bar .item .img-box img{
+    width: 80%;
+    height: 100%;
+}
+
+.banner .bottom-bar .item p{
+    font-size: .9em;
+    margin: 0 0 10px 0;
+}
+
+}
+
+
+
+
+
